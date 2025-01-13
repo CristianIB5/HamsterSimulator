@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &642885 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4472031465407655537, guid: 5a23e8539ecea79418fd917a96eb25b7, type: 3}
+  m_PrefabInstance: {fileID: 1135200120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &97897159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5370053980245666367, guid: 5a23e8539ecea79418fd917a96eb25b7, type: 3}
@@ -476,12 +481,40 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8719323196965000352, guid: 5a23e8539ecea79418fd917a96eb25b7, type: 3}
   m_PrefabInstance: {fileID: 1135200120}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 642885}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2656e4e75631dff4db9fb35eef5476ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &714884574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8eaaf8e8d2e04d4488febb6ba3b567b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToDie: 5
+  onDeath:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 714884569}
+        m_TargetAssemblyTypeName: PlayerStateMachine, Assembly-CSharp
+        m_MethodName: Death
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &761308663
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +1001,10 @@ PrefabInstance:
       propertyPath: cameraAim
       value: 
       objectReference: {fileID: 895747551}
+    - target: {fileID: 566086545806104412, guid: 5a23e8539ecea79418fd917a96eb25b7, type: 3}
+      propertyPath: FallDamageSpeed
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1493022169770847199, guid: 5a23e8539ecea79418fd917a96eb25b7, type: 3}
       propertyPath: virtualCamera
       value: 
@@ -1027,7 +1064,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4472031465407655537, guid: 5a23e8539ecea79418fd917a96eb25b7, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 714884574}
   m_SourcePrefab: {fileID: 100100000, guid: 5a23e8539ecea79418fd917a96eb25b7, type: 3}
 --- !u!1 &1479579470
 GameObject:
